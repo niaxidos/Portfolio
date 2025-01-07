@@ -220,4 +220,23 @@ footer {
     #scrollable{
         overflow-x: hidden;
     }
+
+    #linkedin-img {
+        width: 28px;
+        height: 28px;
+        padding-top: 8px;
+    }
+    
+    #gmail-img {
+    
+        height: 40px;
+        width: 35px;
+        padding-top: 2px;
+    }
+    
+    #github-img {
+        height: 35px;
+        width: 35px;
+        padding-top: 4px;
+    }
 }
