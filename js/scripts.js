@@ -1,12 +1,11 @@
 // Scrolling outside of section. Implement later.
-
-/** 
+ 
 document.addEventListener("wheel", function (event) {
   const scrollable = document.getElementById("scrollable");
   scrollable.scrollTop += event.deltaY * 0.3;
   event.preventDefault();
 });
-*/
+
 
 // Smooth scrolling
 document.querySelectorAll("nav a").forEach((anchor) => {
