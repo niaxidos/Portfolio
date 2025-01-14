@@ -1,13 +1,11 @@
-// Scrolling outside of section. Implement later.
- 
+// scrolling outside of section
 document.addEventListener("wheel", function (event) {
   const scrollable = document.getElementById("scrollable");
   scrollable.scrollTop += event.deltaY * 0.3;
   event.preventDefault();
 });
 
-
-// Smooth scrolling
+// smooth scrolling
 document.querySelectorAll("nav a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -22,7 +20,7 @@ document.querySelectorAll("nav a").forEach((anchor) => {
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 
-// Highlight when a section is in view
+// highlight when a section is in view
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -39,34 +37,28 @@ const observer = new IntersectionObserver(
   { threshold: 0.5 }
 );
 
+// add sparkle effect
 sections.forEach((section) => observer.observe(section));
-
 document.addEventListener("mousemove", (e) => {
   const sparkle = document.createElement("div");
   sparkle.classList.add("sparkle");
   document.body.appendChild(sparkle);
 });
 
-// Updates the visible image
-const imagesContainer = document.querySelector(".images");
-const images = document.querySelectorAll(".images img");
-const prevButton = document.querySelector(".prev");
-const nextButton = document.querySelector(".next");
-let currentIndex = 0;
+// play/pause button
+function toggleGif(element) {
+  const container = element.parentNode;
+  const img = container.querySelector(".static");
 
-function updateGallery() {
-  const offset = -currentIndex * 100;
-  imagesContainer.style.transform = `translateX(${offset}%)`;
+  if (img.classList.contains("gif")) {
+    img.src = "files/img/Black.png"; 
+    img.classList.remove("gif");
+    element.innerText = "▶"; 
+    element.classList.remove("pause"); 
+  } else {
+    img.src = "files/gif/SnakeGame.gif"; 
+    img.classList.add("gif");
+    element.innerText = "⏸︎"; 
+    element.classList.add("pause"); 
+  }
 }
-
-prevButton.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  updateGallery();
-});
-
-nextButton.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % images.length;
-  updateGallery();
-});
-
-updateGallery();
