@@ -246,12 +246,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+
   .gif-container {
     display: none;
   }
 
   #scrollable {
     overflow-x: hidden;
+    height: 50vh;
   }
 
   #linkedin-img {
