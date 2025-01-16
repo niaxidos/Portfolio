@@ -268,9 +268,11 @@ footer {
     display: none;
   }
 
+
   #scrollable {
     overflow-x: hidden;
     height: 50vh;
+    margin-left: 15px;
   }
 
   #linkedin-img {
