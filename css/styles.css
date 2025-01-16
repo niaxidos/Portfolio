@@ -5,6 +5,14 @@ header {
   background: #262d3f;
 }
 
+p {
+  text-align: center;
+}
+
+#scrollable h2 {
+  text-align: ;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -67,7 +75,6 @@ p {
 #scrollable {
   display: flex;
   flex-direction: column;
-  align-content: center;
   margin-top: 10vh;
   max-height: 500px;
   height: 60vh;
@@ -141,6 +148,10 @@ li {
   outline-offset: 5px;
 }
 
+#about {
+  text-align: center;
+}
+
 .contact-img {
   display: flex;
   flex-direction: row;
@@ -168,6 +179,7 @@ li {
 #projects {
   width: 30vw;
   grid-column: 2;
+  text-align: center;
 }
 
 .project {
@@ -195,6 +207,12 @@ li {
 
 #contact {
   grid-column: 2;
+  text-align: center;
+}
+
+.contact-img {
+  display: flex;
+  justify-content: center;
 }
 
 .contact-img img:hover {
@@ -246,7 +264,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-
   .gif-container {
     display: none;
   }

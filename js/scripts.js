@@ -51,14 +51,14 @@ function toggleGif(element) {
   const img = container.querySelector(".static");
 
   if (img.classList.contains("gif")) {
-    img.src = "files/img/Black.png"; 
+    img.src = "files/img/Black.png";
     img.classList.remove("gif");
-    element.innerText = "▶"; 
-    element.classList.remove("pause"); 
+    element.innerText = "▶";
+    element.classList.remove("pause");
   } else {
-    img.src = "files/gif/SnakeGame.gif"; 
+    img.src = "files/gif/SnakeGame.gif";
     img.classList.add("gif");
-    element.innerText = "⏸︎"; 
-    element.classList.add("pause"); 
+    element.innerText = "⏸︎";
+    element.classList.add("pause");
   }
 }
